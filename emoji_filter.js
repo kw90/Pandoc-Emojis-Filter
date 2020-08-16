@@ -148,24 +148,24 @@ async function visit(obj, format, meta) {
 	if (type === "Str") {
 		return await replace_emojis(value, format, emoji_source)
 	}
-	else if (type == "Code") {
-		var [[code_identifier, code_classes, code_attributes], code_text] = value
-		return await code_to_texttt(code_text, format, emoji_source)
-		// return pandoc.Code([code_identifier, code_classes, code_attributes], code_text)
-	}
-	else if (type == "RawBlock") {
-		// var [raw_format, raw_text] = value
-		// return pandoc.RawBlock(raw_format, raw_text)
-	}
-	else if (type == "RawInline") {
-		// var [raw_format, raw_text] = value
-		// return pandoc.RawInline(raw_format, raw_text)
-	}
-	else if (type == "CodeBlock") {
-		var [[code_identifier, code_classes, code_attributes], code_text] = value
-		return await codeblock_to_verbatim(code_text, format, emoji_source)
-		// return pandoc.CodeBlock([code_identifier, code_classes, code_attributes], code_text)
-	}
+	// else if (type == "Code") {
+	// 	var [[code_identifier, code_classes, code_attributes], code_text] = value
+	// 	return await code_to_texttt(code_text, format, emoji_source)
+	// 	// return pandoc.Code([code_identifier, code_classes, code_attributes], code_text)
+	// }
+	// else if (type == "RawBlock") {
+	// 	// var [raw_format, raw_text] = value
+	// 	// return pandoc.RawBlock(raw_format, raw_text)
+	// }
+	// else if (type == "RawInline") {
+	// 	// var [raw_format, raw_text] = value
+	// 	// return pandoc.RawInline(raw_format, raw_text)
+	// }
+	// else if (type == "CodeBlock") {
+	// 	var [[code_identifier, code_classes, code_attributes], code_text] = value
+	// 	return await codeblock_to_verbatim(code_text, format, emoji_source)
+	// 	// return pandoc.CodeBlock([code_identifier, code_classes, code_attributes], code_text)
+	// }
 }
 
 async function visit_array(arr, format, meta) {
